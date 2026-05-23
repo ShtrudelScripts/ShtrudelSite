@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shtrudels Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="particles"></canvas>
+
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <span class="theme-icon sun">&#9788;</span>
+        <span class="theme-icon moon">&#9790;</span>
+    </button>
+
+    <section class="hero">
+        <h2>Welcome to Shtrudels Products</h2>
+        <div class="hero-buttons">
+            <a href="#nav-panel" class="explore-btn">                Get Started</a>
+            <a href="https://discord.gg/Q6JvqQg8n" target="_blank" class="discord-btn">Discord</a>
+        </div>
+    </section>
+
+    <header id="nav-panel">
+        <div class="nav-panel">
+            <h1>Shtrudels Products</h1>
+            <nav>
+                <ul>
+                    <li><a href="#roblox-hub">Shtrudel Luau Scripts</a></li>
+                    <li><a href="#executors">Roblox Executors</a></li>
+                    <li><a href="#majestic">Majestic Software</a></li>
+                    <li><a href="#gmod">Garry's Mod Executors</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <aside class="sidebar">
+        <div class="sidebar-toggle"></div>
+        <div class="sidebar-content">
+            <section id="roblox" onclick="document.getElementById('roblox-hub').scrollIntoView({behavior:'smooth'})">
+                <h2>Shtrudel Luau Scripts</h2>
+                <p>Discover powerful Lua script executors for Roblox games.</p>
+            </section>
+            <section id="roblox-executors" onclick="document.getElementById('executors').scrollIntoView({behavior:'smooth'})">
+                <h2>Roblox Executors</h2>
+                <p>Find the best Roblox executors for running scripts and enhancing your gaming experience.</p>
+            </section>
+            <section id="majestic">
+                <h2>Majestic Software</h2>
+                <p>Explore our premium software solutions for various platforms.</p>
+            </section>
+            <section id="gmod">
+                <h2>Garry's Mod Executors</h2>
+                <p>Find reliable executors for Garry's Mod to enhance your gameplay.</p>
+            </section>
+        </div>
+    </aside>
+
+    <main id="content">
+        <div class="main-content">
+            <h2>Products &amp; Services</h2>
+            <p>Browse our categories using the left panel.</p>
+        </div>
+    </main>
+
+    <section id="roblox-hub" class="hub-section">
+        <div class="hub-header">
+            <img src="Adobe Express - file.png" alt="Lua.U" class="hub-icon" onclick="this.classList.toggle('expanded')">
+            <h2>[SS] Shtrudel Roblox Hub</h2>
+        </div>
+        <p class="hub-desc">Our roblox script hub with powerful scripts</p>
+        <div class="code-box">
+            <code>loadstring(game:HttpGet('https://pastebin.com/raw/QzjBVWNG'))()</code>
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+        </div>
+    </section>
+
+    <section id="executors" class="executors-section">
+        <h2>Roblox Executors</h2>
+        <div class="executors-grid">
+            <div class="executor-row">
+                <div class="executor-info-frame card-dremia">
+                    <h3>Dremia Executor</h3>
+                    <p>For inexperienced users or those who love interface</p>
+                    <div class="stats-block">98% UNC/SUNC &nbsp;|&nbsp; 8 Level Identity</div>
+                    <div class="download-row">
+                        <span class="dl-btn dl-disabled"><img src="Windows.png" class="dl-icon"> Not available</span>
+                    </div>
+                </div>
+                <img src="Dremia - file.png" alt="Dremia" class="executor-icon">
+            </div>
+            <div class="executor-row row-termux">
+                <img src="Termux.png" alt="Termux" class="executor-icon">
+                <div class="executor-info-frame card-termux">
+                    <h3>Termux</h3>
+                    <p>For experienced users who have worked with the terminal and know the basics of exploits</p>
+                    <div class="stats-block">99% UNC/SUNC &nbsp;|&nbsp; 8 Level Identity</div>
+                    <div class="download-row">
+                        <button class="dl-btn dl-termux" onclick="openDownloadModal()"><img src="Windows.png" class="dl-icon"> Download for Windows</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal-overlay" id="download-modal" onclick="closeDownloadModal(event)">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeDownloadModal()">&times;</button>
+            <h2>Termux Executor</h2>
+            <p class="modal-desc">You are about to download the Termux executor for Windows.</p>
+            <div class="modal-info">
+                <span>Version: 1.3</span>
+                <span>Platform: Windows</span>
+            </div>
+            <a href="https://shtrudels.netlify.app/ShtrudelTermux1.3.zip" class="modal-download-btn" onclick="startDownload(event)" download>Download Now</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Shtrudels Products. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
